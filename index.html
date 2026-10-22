@@ -2,148 +2,276 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Stay Blessed — inspirational quotes and reflections by M. E. Meenakshi Sundaram.">
-  <title>MEMS Quotes | Stay Blessed</title>
-  <style>
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: Georgia, "Times New Roman", serif;
-      color: #26312d;
-      background: #f8f6f0;
-    }
-    header {
-      background: #17352e;
-      color: #fffdf5;
-      text-align: centre;
-      padding: 54px 20px 48px;
-    }
-    .brand {
-      color: #e3c37c;
-      font: bold 13px Arial, sans-serif;
-      letter-spacing: 5px;
-    }
-    h1 { font-size: clamp(36px, 7vw, 64px); margin: 22px 0 12px; }
-    header p { font-size: 18px; line-height: 1.6; margin: 0; }
-    .author { color: #e3c37c; margin-top: 24px; font-size: 16px; }
-    main { max-width: 1000px; margin: auto; padding: 38px 20px 60px; }
-    .intro { text-align: center; margin-bottom: 32px; }
-    .intro h2 { font-size: 30px; margin-bottom: 10px; }
-    .intro p { color: #66716a; line-height: 1.7; }
-    .search { width: 100%; padding: 14px 16px; border: 1px solid #d5d3c8; border-radius: 8px; font-size: 16px; margin: 12px 0 28px; }
-    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-    .quote { background: #fff; border: 1px solid #e8e3d6; border-radius: 12px; padding: 25px; box-shadow: 0 5px 18px #26312d0a; }
-    .quote .number { color: #9b7b35; font: 12px Arial, sans-serif; letter-spacing: 2px; }
-    .quote p { font-size: 21px; line-height: 1.6; }
-    .quote .theme { color: #788279; font: 12px Arial, sans-serif; text-transform: uppercase; letter-spacing: 1.5px; }
-    .quote button { background: #17352e; color: white; border: 0; padding: 10px 15px; border-radius: 6px; cursor: pointer; }
-    .quote button:hover { background: #31584c; }
-    .note { text-align: center; color: #6d756e; font: 14px Arial, sans-serif; margin-top: 28px; line-height: 1.7; }
-    footer { text-align: center; background: #17352e; color: #eee8d7; padding: 26px 16px; line-height: 1.8; }
-    footer span { color: #e3c37c; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MEMS Quotes | Stay Blessed</title>
+<meta name="description" content="Explore the Stay Blessed inspirational poster collection by M. E. Meenakshi Sundaram.">
+
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #f7f5ef;
+  color: #25352e;
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+header {
+  background: #17352e;
+  color: #fffdf5;
+  text-align: center;
+  padding: 42px 16px;
+}
+
+.brand {
+  color: #dfbf78;
+  font: 13px Arial, sans-serif;
+  letter-spacing: 5px;
+}
+
+h1 {
+  font-size: clamp(38px, 6vw, 60px);
+  margin: 18px 0 10px;
+}
+
+header p {
+  line-height: 1.6;
+  margin: 0;
+}
+
+.author {
+  color: #dfbf78;
+  margin-top: 22px;
+}
+
+main {
+  max-width: 1200px;
+  margin: auto;
+  padding: 36px 20px 55px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.intro h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.intro p {
+  color: #657168;
+  line-height: 1.6;
+}
+
+#search {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin: 0 0 28px;
+  border: 1px solid #d7d5ca;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.poster {
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px #17251b12;
+}
+
+.poster a {
+  display: block;
+  line-height: 0;
+}
+
+.poster img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .2s ease;
+}
+
+.poster a:hover img {
+  transform: scale(1.02);
+}
+
+.caption {
+  padding: 14px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.caption span {
+  display: block;
+  color: #8c743d;
+  font: 11px Arial, sans-serif;
+  letter-spacing: 1.5px;
+  margin-top: 6px;
+}
+
+#empty {
+  display: none;
+  text-align: center;
+  padding: 30px;
+  color: #657168;
+}
+
+footer {
+  background: #17352e;
+  color: #eee8d7;
+  text-align: center;
+  padding: 28px 16px;
+  line-height: 1.8;
+}
+
+footer .gold {
+  color: #dfbf78;
+}
+
+@media (max-width: 750px) {
+  .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 460px) {
+  .gallery { grid-template-columns: 1fr; }
+  main { padding: 25px 14px 40px; }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <div class="brand">MEMS QUOTES</div>
-    <h1>Stay Blessed</h1>
-    <p>Thoughts to reflect on.<br>Wisdom to carry forward.</p>
-    <div class="author">M. E. Meenakshi Sundaram</div>
-  </header>
+<header>
+  <div class="brand">MEMS QUOTES</div>
+  <h1>Stay Blessed</h1>
+  <p>Thoughts to reflect on.<br>Wisdom to carry forward.</p>
+  <div class="author">M. E. Meenakshi Sundaram</div>
+</header>
 
-  <main>
-    <section class="intro">
-      <h2>A Thought for Your Journey</h2>
-      <p>Words to inspire reflection, strengthen perspective<br>and bring meaning to everyday life.</p>
-    </section>
+<main>
+  <section class="intro">
+    <h2>The Poster Collection</h2>
+    <p>A growing collection of thoughts for life's journey.</p>
+  </section>
 
-    <input class="search" id="search" type="search"
-      placeholder="Search quotes by words or theme..."
-      aria-label="Search quotes">
+  <input
+    id="search"
+    type="search"
+    placeholder="Search posters by date or filename..."
+    aria-label="Search posters">
 
-    <section class="gallery" id="gallery">
-      <article class="quote">
-        <div class="number">STAY BLESSED · 001</div>
-        <p>No matter how much pain is forced upon you,<br>you are accountable for the results you create.</p>
-        <div class="theme">Resilience · Accountability</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
+  <section class="gallery" id="gallery">
 
-      <article class="quote">
-        <div class="number">STAY BLESSED · 002</div>
-        <p>Greater heights demand lighter burdens.<br>Let go of the anchors that hold you back.</p>
-        <div class="theme">Growth · Letting go</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
+    <article class="poster" data-search="1 oct october">
+      <a href="posters/1OctQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/1OctQ.jpg" alt="Stay Blessed poster, 1 October" loading="lazy">
+      </a>
+      <div class="caption">1 October<span>STAY BLESSED</span></div>
+    </article>
 
-      <article class="quote">
-        <div class="number">STAY BLESSED · 003</div>
-        <p>You can never control the weather.<br>You can always control your steps.</p>
-        <div class="theme">Perspective · Resilience</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
+    <article class="poster" data-search="1 sep september">
+      <a href="posters/1SepQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/1SepQ.jpg" alt="Stay Blessed poster, 1 September" loading="lazy">
+      </a>
+      <div class="caption">1 September<span>STAY BLESSED</span></div>
+    </article>
 
-      <article class="quote">
-        <div class="number">STAY BLESSED · 004</div>
-        <p>Do not dwell on the challenge.<br>Focus on finding the solution.</p>
-        <div class="theme">Focus · Solutions</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
+    <article class="poster" data-search="2 oct october">
+      <a href="posters/2OctQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/2OctQ.jpg" alt="Stay Blessed poster, 2 October" loading="lazy">
+      </a>
+      <div class="caption">2 October<span>STAY BLESSED</span></div>
+    </article>
 
-      <article class="quote">
-        <div class="number">STAY BLESSED · 005</div>
-        <p>People may forget your achievements and your awards,<br>but they will always remember how you made them feel.</p>
-        <div class="theme">Kindness · Relationships</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
+    <article class="poster" data-search="2 sep september">
+      <a href="posters/2SepQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/2SepQ.jpg" alt="Stay Blessed poster, 2 September" loading="lazy">
+      </a>
+      <div class="caption">2 September<span>STAY BLESSED</span></div>
+    </article>
 
-      <article class="quote">
-        <div class="number">STAY BLESSED · 006</div>
-        <p>Wisdom is not about never giving up,<br>but knowing when it is time to let go.</p>
-        <div class="theme">Wisdom · Decisions</div>
-        <p><button onclick="shareQuote(this)">Share this thought</button></p>
-      </article>
-    </section>
+    <article class="poster" data-search="3 aug august">
+      <a href="posters/3AugQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/3AugQ.jpg" alt="Stay Blessed poster, 3 August" loading="lazy">
+      </a>
+      <div class="caption">3 August<span>STAY BLESSED</span></div>
+    </article>
 
-    <p class="note">This is the beginning of the collection.<br>Your original posters can be added in the next stage.</p>
-  </main>
+    <article class="poster" data-search="3 oct october">
+      <a href="posters/3OctQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/3OctQ.jpg" alt="Stay Blessed poster, 3 October" loading="lazy">
+      </a>
+      <div class="caption">3 October<span>STAY BLESSED</span></div>
+    </article>
 
-  <footer>
-    <span>STAY BLESSED</span><br>
-    M. E. Meenakshi Sundaram<br>
-    <small>Words for reflection. Thoughts for life.</small>
-  </footer>
+    <article class="poster" data-search="3 sep september">
+      <a href="posters/3SepQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/3SepQ.jpg" alt="Stay Blessed poster, 3 September" loading="lazy">
+      </a>
+      <div class="caption">3 September<span>STAY BLESSED</span></div>
+    </article>
 
-  <script>
-    const search = document.getElementById("search");
-    search.addEventListener("input", function () {
-      const term = this.value.toLowerCase();
-      document.querySelectorAll(".quote").forEach(card => {
-        card.style.display = card.innerText.toLowerCase().includes(term)
-          ? "" : "none";
-      });
-    });
+    <article class="poster" data-search="4 aug august">
+      <a href="posters/4AugQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/4AugQ.jpg" alt="Stay Blessed poster, 4 August" loading="lazy">
+      </a>
+      <div class="caption">4 August<span>STAY BLESSED</span></div>
+    </article>
 
-    async function shareQuote(button) {
-      const card = button.closest(".quote");
-      const text = card.querySelector("p").innerText;
-      if (navigator.share) {
-        try {
-          await navigator.share({ title: "Stay Blessed", text: text });
-        } catch (error) {}
-      } else if (navigator.clipboard) {
-        try {
-          await navigator. clipboard.writeText(text);
-          button.textContent = "Copied!";
-        } catch (error) {
-          window.prompt("Copy your quote:", text);
-        }
-      } else {
-        window.prompt("Copy your quote:", text);
-      }
-    }
-  </script>
+    <article class="poster" data-search="4 oct october">
+      <a href="posters/4OctQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/4OctQ.jpg" alt="Stay Blessed poster, 4 October" loading="lazy">
+      </a>
+      <div class="caption">4 October<span>STAY BLESSED</span></div>
+    </article>
+
+    <article class="poster" data-search="5 aug august">
+      <a href="posters/5AugQ.jpg" target="_blank" rel="noopener">
+        <img src="posters/5AugQ.jpg" alt="Stay Blessed poster, 5 August" loading="lazy">
+      </a>
+      <div class="caption">5 August<span>STAY BLESSED</span></div>
+    </article>
+
+  </section>
+
+  <p id="empty">No matching posters found.</p>
+</main>
+
+<footer>
+  <span class="gold">STAY BLESSED</span><br>
+  M. E. Meenakshi Sundaram<br>
+  <small>Words for reflection. Thoughts for life.</small>
+</footer>
+
+<script>
+const search = document.getElementById("search");
+const posters = document.querySelectorAll(".poster");
+const empty = document.getElementById("empty");
+
+search.addEventListener("input", function () {
+  const term = this.value.toLowerCase().trim();
+  let count = 0;
+
+  posters.forEach(poster => {
+    const matches =
+      poster.innerText.toLowerCase().includes(term) ||
+      poster.dataset.search.includes(term);
+
+    poster.style.display = matches ? "" : "none";
+    if (matches) count++;
+  });
+
+  empty.style.display = count ? "none" : "block";
+});
+</script>
 </body>
 </html>
